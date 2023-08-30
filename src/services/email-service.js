@@ -30,6 +30,7 @@ async function createTicket(data){
 }   
 async function getPendingEmails(){
     try {
+        console.log("inside service")
         const response = await ticketRepo.getPendingTickets();
         return response;
     } catch (error) {

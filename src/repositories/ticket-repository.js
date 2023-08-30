@@ -7,9 +7,10 @@ class ticketRepository extends CrudRepository{
     }
     
 async getPendingTickets(){
+    console.log("inside pending tickets")
     const response = await ticket.findAll({
         where:{
-            status: 'PENDING'
+            id:1
         }
     });
     return response;
